@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "@fg/proxy",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {}
+}

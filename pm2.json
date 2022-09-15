@@ -1,0 +1,34 @@
+{
+  "apps": [
+    {
+      "name": "proxy",
+      "cwd": "./packages/proxy",
+      "script": "./server.js",
+      "instances": 2,
+      "instance_var": "INSTANCE_ID",
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "200M",
+      "env": {
+        "NODE_ENV": "production",
+        "WITH_PM2": true
+      },
+      "error_file": "./logs/err.log",
+      "out_file" : "./logs/out.log"
+    },
+    {
+      "name": "demo",
+      "cwd": "./packages/demo",
+      "script": "./server.js",
+      "instances": 2,
+      "instance_var": "INSTANCE_ID",
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "200M",
+      "env": {
+        "NODE_ENV": "production",
+        "WITH_PM2": true
+      },
+      "error_file": "./logs/err.log",
+      "out_file" : "./logs/out.log"
+    }
+  ]
+}
